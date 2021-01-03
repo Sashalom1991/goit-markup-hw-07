@@ -1,61 +1,48 @@
 @charset "UTF-8";
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-​
-​
-​ *,
+​ ​ ​ *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-​
-​:root {
+​ ​:root {
   -moz-tab-size: 4;
   tab-size: 4;
 }
 
-​
-​ html {
+​ ​ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
 
-​
-​
-​ body {
+​ ​ ​ body {
   margin: 0;
 }
 
-​
-​ body {
+​ ​ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
-​
-​
-​ hr {
+​ ​ ​ hr {
   height: 0;
   /* 1 */
   color: inherit;
   /* 2 */
 }
 
-​
-​
-​ abbr[title] {
+​ ​ ​ abbr[title] {
   text-decoration: underline dotted;
 }
 
-​
-​ b,
+​ ​ b,
 strong {
   font-weight: bolder;
 }
 
-​
-​ code,
+​ ​ code,
 kbd,
 samp,
 pre {
@@ -65,13 +52,11 @@ pre {
   /* 2 */
 }
 
-​
-​ small {
+​ ​ small {
   font-size: 80%;
 }
 
-​
-​ sub,
+​ ​ sub,
 sup {
   font-size: 75%;
   line-height: 0;
@@ -87,18 +72,14 @@ sup {
   top: -0.5em;
 }
 
-​
-​
-​ table {
+​ ​ ​ table {
   text-indent: 0;
   /* 1 */
   border-color: inherit;
   /* 2 */
 }
 
-​
-​
-​ button,
+​ ​ ​ button,
 input,
 optgroup,
 select,
@@ -113,84 +94,71 @@ textarea {
   /* 2 */
 }
 
-​
-​ button,
+​ ​ button,
 select {
   /* 1 */
   text-transform: none;
 }
 
-​
-​ button,
+​ ​ button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
 }
 
-​
-​::-moz-focus-inner {
+​ ​::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-​
-​:-moz-focusring {
+​ ​:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-​
-​:-moz-ui-invalid {
+​ ​:-moz-ui-invalid {
   box-shadow: none;
 }
 
-​
-​ legend {
+​ ​ legend {
   padding: 0;
 }
 
-​
-​ progress {
+​ ​ progress {
   vertical-align: baseline;
 }
 
-​
-​::-webkit-inner-spin-button,
+​ ​::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
   height: auto;
 }
 
-​
-​ [type='search'] {
+​ ​ [type='search'] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
 }
 
-​
-​::-webkit-search-decoration {
+​ ​::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-​
-​::-webkit-file-upload-button {
+​ ​::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
   /* 2 */
 }
 
-​
-​
-​ summary {
+​ ​ ​ summary {
   display: list-item;
 }
 
 body {
   margin: 0;
   background-color: #ffffff;
-  color: var(--primary-text-color);
+  color: #757575;
   font-family: 'Raleway', sans-serif;
   font-family: 'Roboto', sans-serif;
 }
@@ -250,7 +218,7 @@ button {
 }
 
 .section-title {
-  color: var(--title-color);
+  color: #212121;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
@@ -265,18 +233,23 @@ button {
   padding-right: 15px;
 }
 
+.work-exemple, .team-container, .container-client, .container-projects {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* Навигация сайта*/
 .header {
   border-bottom: 1px solid #ECECEC;
 }
 
-.nav {
+.container-header {
   display: flex;
   align-items: center;
 }
 
 .logo {
-  display: block;
+  display: inline-flex;
   padding: 0;
   color: #2195f3;
   font-family: Raleway;
@@ -289,18 +262,23 @@ button {
   color: #212121;
 }
 
-.nav-site {
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
   display: flex;
   align-items: center;
   margin-left: 93px;
 }
 
-.nav-site .item + .item,
-.auth-link .item + .item {
+.navigation-item + .navigation-item,
+.auth-item + .auth-item {
   margin-left: 50px;
 }
 
-.nav-site .link {
+.navigation-list .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -312,12 +290,16 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-site .current {
+.navigation-list .link:hover, .navigation-list .link:focus {
+  color: #2195f3;
+}
+
+.navigation-list .current {
   color: #2195f3;
   position: relative;
 }
 
-.current::after {
+.navigation-list .current::after {
   content: '';
   position: absolute;
   bottom: 0%;
@@ -328,23 +310,15 @@ button {
   border-radius: 2px;
 }
 
-.nav-site .link:hover,
-.nav-site .link:focus {
-  color: #2195f3;
-}
-
-.auth-link {
+.auth-list {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
 
-.auth-link .item .link {
+.auth-item .link {
   display: flex;
   align-items: center;
-}
-
-.auth-link .link {
   color: #757575;
   font-style: normal;
   font-size: 14px;
@@ -354,64 +328,15 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.auth-item .link:hover, .auth-item .link:focus {
+  color: #2195f3;
+}
+
 .icon-nav {
   display: block;
   padding: 0;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.auth-link .link:hover,
-.auth-link .link:focus {
-  color: #2195f3;
-}
-
-/* Наши преимущества*/
-.our-work-list {
-  display: flex;
-  padding-top: 94px;
-}
-
-.our-work-list .item {
-  display: inline-block;
-  max-width: 270px;
-}
-
-.our-work-list .item + .item {
-  margin-left: 30px;
-}
-
-.our-work-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
-  background-color: #F5F4FA;
-  border-radius: 4px;
-}
-
-.work-icon {
-  width: 70px;
-  height: 70px;
-}
-
-.our-work-subtitle {
-  color: #212121;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.our-work-text {
-  padding-top: 10px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.03em;
 }
 
 /* Главная часть, Герой*/
@@ -426,13 +351,13 @@ button {
 }
 
 .hero-container {
-  text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
 }
 
 .hero-title {
   display: block;
+  text-align: center;
   color: #ffffff;
   font-size: 44px;
   font-weight: 900;
@@ -441,9 +366,11 @@ button {
   letter-spacing: 0.06em;
 }
 
-.button.primary {
-  display: inline-block;
+.btn-modal {
+  display: block;
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px 32px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -453,31 +380,74 @@ button {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  text-align: center;
 }
 
-.container.work-exemple {
+/* Наши преимущества*/
+.advantage-list {
+  display: flex;
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
-.our-work-exemple {
+.advantage-item {
+  display: inline-block;
+  max-width: 270px;
+}
+
+.advantage-item + .advantage-item {
+  margin-left: 30px;
+}
+
+.advantage-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+}
+
+.advantage-svg {
+  width: 70px;
+  height: 70px;
+}
+
+.advantage-title {
+  color: #212121;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantage-text {
+  padding-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/* Чем мы занимаемся */
+.work-exemple-list {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
 }
 
-.our-work-exemple > .img:not(:last-child) {
+.work-exemple-item:not(:last-child) {
   padding-right: 30px;
 }
 
-.img {
+.work-exemple-item {
   display: block;
   padding: 0;
   z-index: 1;
 }
 
-.img > a {
+.work-exemple-link {
   position: relative;
   display: inline-block;
   width: 370px;
@@ -496,14 +466,14 @@ button {
   background-color: rgba(47, 48, 58, 0.8);
 }
 
-.work-exemple-text > p {
+.work-exemple-text > .text {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 /* Наша команда*/
@@ -511,38 +481,32 @@ button {
   background-color: #F5F4FA;
 }
 
-.team-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .team-title {
   margin-bottom: 50px;
 }
 
-.team-items {
+.team-list {
   display: flex;
 }
 
-.team-items > .card {
+.team-item {
   width: 270px;
-  margin-right: 30px;
   background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-items > .card:last-child {
-  margin-right: 0px;
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 
-.card-text {
+.team-text {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 }
 
-.team-items .name {
+.worker-name {
   margin-bottom: 10px;
   color: #212121;
   font-size: 16px;
@@ -550,7 +514,7 @@ button {
   line-height: 1.18;
 }
 
-.team-items .profession {
+.worker-profession {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.18;
@@ -588,15 +552,9 @@ button {
   fill: currentColor;
 }
 
-.icon-link:hover,
-.icon-link:focus {
+.icon-link:hover, .icon-link:focus {
   background-color: #2195f3;
   color: #ffffff;
-}
-
-.container-client {
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .client-list {
@@ -625,14 +583,13 @@ button {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.logo-icon {
-  fill: currentColor;
-}
-
-.client-link:hover,
-.client-link:focus {
+.client-link:hover, .client-link:focus {
   border-color: #2195f3;
   color: #2195f3;
+}
+
+.client-link .logo-icon {
+  fill: currentColor;
 }
 
 /* Подвал */
@@ -659,11 +616,11 @@ button {
   color: #ffffff;
 }
 
-.contact li + li {
+.contact-item + .contact-item {
   margin-top: 9px;
 }
 
-.contact a {
+.contact-item a {
   font-style: normal;
   font-size: 14px;
   font-weight: 400;
@@ -680,7 +637,7 @@ button {
   display: block;
   margin-bottom: 20px;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.15;
   letter-spacing: 0.03em;
@@ -697,8 +654,15 @@ button {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.icon-footer .icon-link:hover, .icon-footer .icon-link:focus {
+  background-color: #2195f3;
+  color: #ffffff;
+}
+
+/* Подписка на рассылку */
 .footer-form-email {
   width: 358px;
   height: 50px;
@@ -731,13 +695,14 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-form > svg {
+.btn-form .icon-subscription {
+  width: 24px;
+  height: 24px;
   margin-left: 10px;
   fill: currentColor;
 }
 
-.btn-form:hover,
-.btn-form:focus {
+.btn-form:hover, .btn-form:focus {
   background-color: #188CE8;
 }
 
@@ -817,6 +782,11 @@ button {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-input:focus-within {
+  border: 1px solid #2196F3;
+  border-radius: 4px;
+}
+
 .input-icons {
   position: absolute;
   bottom: 21px;
@@ -824,16 +794,11 @@ button {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus-within {
-  border: 1px solid #2196F3;
-  border-radius: 4px;
-}
-
 .form-input:focus-within + .input-icons {
   fill: #2195f3;
 }
 
-.form-modal textarea {
+.comment {
   width: 448px;
   height: 120px;
   resize: none;
@@ -846,7 +811,7 @@ button {
   cursor: pointer;
 }
 
-.form-modal textarea::placeholder {
+.comment::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
@@ -854,7 +819,7 @@ button {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-modal textarea:focus-within {
+.comment:focus-within {
   border: 1px solid #2196F3;
   border-radius: 4px;
 }
@@ -897,6 +862,29 @@ button {
   background-origin: border-box;
 }
 
+.btn-send {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background-color: #2195f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send:hover, .btn-send:focus {
+  background-color: #188CE8;
+}
+
 .close {
   position: absolute;
   top: 8px;
@@ -911,66 +899,36 @@ button {
   color: #ffffff;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   fill: #2196F3;
 }
 
-.btn-send {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: #fff;
-  background-color: #2195f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.btn-send:hover,
-.btn-send:focus {
-  background-color: #188CE8;
-}
-
-.container-projects {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
+/* Контент страници портфолио*/
 /* Радиокнопки, выбор категории работ*/
-.container-btn {
+.btn-list {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.container-btn .btn-figure + .btn-figure {
+.btn-item + .btn-item {
   margin-left: 8px;
 }
 
 .btn {
-  border-radius: 4px;
-  padding: 6px 22px;
   min-width: 73px;
-  background-color: #F5F4FA;
-  color: #212121;
+  text-align: center;
+  padding: 6px 22px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
-  text-align: center;
+  border-radius: 4px;
+  background-color: #F5F4FA;
+  color: #212121;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:focus,
-.btn:hover {
+.btn:focus, .btn:hover {
   background-color: #2195f3;
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -983,20 +941,20 @@ button {
   margin: -15px;
 }
 
-.projects-list > .item {
+.projects-item {
   width: 370px;
   margin: 15px;
 }
 
-.projects-list .item:nth-child(3n) {
+.projects-item:nth-child(3n) {
   margin-right: 0px;
 }
 
-.projects-list .item:nth-last-child(-n+3) {
+.projects-item:nth-last-child(-n+3) {
   margin-bottom: 0px;
 }
 
-.projects-list a {
+.projects-list .projects-link {
   display: block;
   position: relative;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1024,7 +982,7 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.overlay .description-work {
+.overlay > .description-work {
   padding: 63px 24px;
   font-weight: 400;
   font-size: 18px;
@@ -1033,10 +991,10 @@ button {
   color: #ffffff;
 }
 
-.projects-list a:hover,
-.projects-list a:focus,
-.projects-list a:hover .overlay,
-.projects-list a:focus .overlay {
+.projects-link:hover,
+.projects-link:focus,
+.projects-link:hover .overlay,
+.projects-link:focus .overlay {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   transform: translateY(0);
 }
@@ -1057,56 +1015,18 @@ button {
   border-left-color: #eeeeee;
 }
 
-.our-projects-title {
+.list-content .our-projects-title {
   color: #212121;
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
 }
 
-.our-projects-cat {
+.list-content .our-projects-cat {
   margin-top: 4px;
   color: #757575;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.87;
-}
-
-/* Иконки соц. сайтов */
-.icon-list {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-}
-
-.icon-item {
-  display: flex;
-}
-
-.icon-item:not(:last-child) {
-  margin-right: 10px;
-}
-
-.icon-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: #AFB1B8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-link .icon-social {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
-.icon-link:hover,
-.icon-link:focus {
-  background-color: #2195f3;
-  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

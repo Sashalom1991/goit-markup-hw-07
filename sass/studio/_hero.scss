@@ -8,21 +8,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-
 }
 
 .hero-container {
-    text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
 
 .hero-title {
     display: block;
-
+    text-align: center;
     color: $title-color-white;
-
     font-size: 44px;
     font-weight: 900;
     line-height: 1.37;
@@ -30,19 +26,18 @@
     letter-spacing: 0.06em;
 }
 
-.button.primary {
-    display: inline-block;
+.btn-modal {
+    display: block;
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px 32px;
     border-radius: 4px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.15);
     background-color: $accent-color;
-    color: $title-color-white;
-
+    color:$title-color-white;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.875;
     letter-spacing: 0.06em;
-    text-align: center;
 }

@@ -3,17 +3,15 @@
     border-bottom: 1px solid #ECECEC;
 }
 
-.nav {
+.container-header {
     display: flex;
     align-items: center;
 }
 
 .logo {
-    display: block;
+    display: inline-flex;
     padding: 0;
-
     color: $accent-color;
-
     font-family: Raleway;
     font-style: normal;
     font-weight: 700;
@@ -24,37 +22,43 @@
     color: $title-color;
 }
 
-.nav-site {
+.navigation {
+    display: flex;
+    align-items: center;
+}
+.navigation-list {
     display: flex;
     align-items: center;
     margin-left: 93px;
 }
 
-.nav-site .item+.item,
-.auth-link .item+.item {
+.navigation-item+.navigation-item,
+.auth-item+.auth-item {
     margin-left: 50px;
 }
 
-.nav-site .link {
+.navigation-list .link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     color: $title-color;
-
     font-size: 14px;
     font-weight: 500;
     line-height: 1.17;
     text-decoration: none;
-
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+}
 }
 
-.nav-site .current {
+.navigation-list .current {
     color: $accent-color;
     position: relative;
-}
-
-.current::after {
+    
+    &::after {
     content: '';
     position: absolute;
     bottom: 0%;
@@ -63,28 +67,18 @@
     height: 4px;
     background-color: $accent-color;
     border-radius: 2px;
-
+    }
 }
 
-.nav-site .link:hover,
-.nav-site .link:focus {
-    color: $accent-color;
-}
-
-
-.auth-link {
+.auth-list {
     margin-left: auto;
     display: flex;
     align-items: center;
 }
 
-.auth-link .item .link {
+.auth-item .link {
     display: flex;
     align-items: center;
-}
-
-.auth-link .link {
-
     color: $primary-text-color;
 
     font-style: normal;
@@ -94,6 +88,11 @@
     text-decoration: none;
 
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
 }
 
 .icon-nav {
@@ -103,7 +102,4 @@
     fill: currentColor;
 }
 
-.auth-link .link:hover,
-.auth-link .link:focus {
-    color: $accent-color;
-}
+

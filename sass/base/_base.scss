@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: #ffffff;
-    color: var(--primary-text-color);
+    color: $primary-text-color;
 
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
@@ -64,7 +64,7 @@ button {
 }
 
 .section-title {
-    color: var(--title-color);
+    color: $title-color;
 
     font-size: 36px;
     font-weight: 700;

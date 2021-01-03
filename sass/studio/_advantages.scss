@@ -1,23 +1,21 @@
 /* Наши преимущества*/
 
-.our-work-list {
+.advantage-list {
     display: flex;
     padding-top: 94px;
 }
 
-.our-work-list .item {
+.advantage-item {
     display: inline-block;
     max-width: 270px;
 }
 
-.our-work-list .item+.item {
+.advantage-item+.advantage-item {
     margin-left: 30px;
 }
 
-.our-work-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.advantage-icon {
+    @include centredFlex();
     width: 270px;
     height: 120px;
     margin-bottom: 30px;
@@ -25,14 +23,12 @@
     border-radius: 4px;
 }
 
-.work-icon {
+.advantage-svg {
     width: 70px;
     height: 70px;
-
 }
 
-
-.our-work-subtitle {
+.advantage-title {
     color: $title-color;
 
     font-size: 14px;
@@ -42,9 +38,8 @@
     text-transform: uppercase;
 }
 
-.our-work-text {
+.advantage-text {
     padding-top: 10px;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
